@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <!--
+            Odoo 17: uses ir.module.category (category_id) to group security groups.
+            The res.groups.privilege model was introduced in Odoo 18 — do NOT use it here.
+        -->
+        <record id="module_category_status_history" model="ir.module.category">
+            <field name="name">Field Tracker History</field>
+            <field name="sequence">100</field>
+        </record>
+
+        <!-- ── History User ─────────────────────────────────────────────── -->
+        <record id="group_history_user" model="res.groups">
+            <field name="name">History User</field>
+            <field name="category_id" ref="module_category_status_history"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">
+                Can view the Change History tab on Purchase Orders, Sales Orders
+                and Stock Pickings, and the Change History menu items inside each
+                application.
+            </field>
+        </record>
+
+        <!-- ── History Manager ──────────────────────────────────────────── -->
+        <record id="group_history_manager" model="res.groups">
+            <field name="name">History Manager</field>
+            <field name="category_id" ref="module_category_status_history"/>
+            <field name="implied_ids" eval="[(4, ref('group_history_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+            <field name="comment">
+                Full access to all change history records, including the global
+                All Change History menu and write/delete permissions on log
+                entries. Typically assigned to managers and auditors.
+            </field>
+        </record>
+
+    </data>
+</odoo>
