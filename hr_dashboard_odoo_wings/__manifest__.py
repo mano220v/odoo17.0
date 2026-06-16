@@ -28,7 +28,7 @@ HR dashboard, attendance management, employee presence tracking, leave tracking,
     "website": "https://apps.odoo.com/apps/modules/browse?author=Odoo%20Wings",
     "support": "vsmanoj144@gmail.com",
     "license": "OPL-1",
-    'price': 2.00,
+    'price': 5.00,
     'currency': 'USD',
     'depends': [
         'web',
