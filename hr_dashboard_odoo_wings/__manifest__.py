@@ -44,6 +44,7 @@ HR dashboard, attendance management, employee presence tracking, leave tracking,
     ],
     'images': [
         'static/description/banner.png',
+        'static/description/icon.png',
         'static/description/screenshot_01_main_dashboard.png',
         'static/description/screenshot_02_present_drilldown.png',
         'static/description/screenshot_03_on_leave_drilldown.png',
