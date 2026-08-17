@@ -1,0 +1,12 @@
+<odoo>
+    <record id="module_category_backup" model="ir.module.category">
+        <field name="name">Database Backup Pro</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="group_backup_manager" model="res.groups">
+        <field name="name">Backup Manager</field>
+        <field name="category_id" ref="module_category_backup"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_system'))]"/>
+    </record>
+</odoo>
