@@ -38,6 +38,7 @@ Features
         ],
     },
     'images': [
+        'static/description/banner.png',
         'static/description/icon.png',
     ],
     'installable': True,
