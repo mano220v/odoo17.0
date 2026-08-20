@@ -27,7 +27,7 @@ percentage share, user breakdown, recent activity and trend analytics.
         ],
     },
     'images': [
-        'static/description/banner_odoo17.png',
+        'static/description/banner.png',
         'static/description/icon.png',
     ],
     "installable": True,
