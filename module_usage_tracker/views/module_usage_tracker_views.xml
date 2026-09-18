@@ -102,7 +102,7 @@
 
     <menuitem id="menu_module_usage_root"
               name="Module Usage"
-              sequence="75"/>
+              sequence="75" web_icon="module_usage_tracker,static/description/icon.png"/>
     <menuitem id="menu_module_usage_dashboard"
               name="Dashboard"
               parent="menu_module_usage_root"
