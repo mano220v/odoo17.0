@@ -4,8 +4,8 @@
         <field name="model">db.backup.now.wizard</field>
         <field name="arch" type="xml">
             <form string="Instant Backup">
+                <field name="state" invisible="1"/>
                 <group>
-                    <field name="state" invisible="1"/>
                     <field name="database_name" readonly="state == 'done'"/>
                     <field name="backup_format" readonly="state == 'done'"/>
                     <field name="backup_filename" invisible="1"/>
